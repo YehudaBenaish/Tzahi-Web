@@ -7,7 +7,7 @@ import './app.less';
 export function App() {
   return (
     <EntryLogo
-      duration={3000}
+      duration={0}
       children={
         <div className="app-container">
           <h1>LAKSHMI</h1>
