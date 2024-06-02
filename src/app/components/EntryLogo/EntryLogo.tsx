@@ -1,27 +1,17 @@
-import { ReactNode, useEffect, useState } from 'react';
-import { ENTRY_LOGO_TEXT } from './consts';
+import { useEffect } from 'react';
 import './EntryLogo.less';
 export type EntryLogoProp = {
 	duration: number;
-	children: ReactNode;
+	setShow: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const EntryLogo = ({ children, duration }: EntryLogoProp) => {
-	const [show, setShow] = useState(true);
-
+export const EntryLogo = ({ duration, setShow }: EntryLogoProp) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShow(false);
 		}, duration);
 		return () => clearTimeout(timer);
-	}, [duration]);
+	}, [duration, setShow]);
 
-	return show ? (
-		<div className="entry-logo-container">
-			<h1 className="header">{ENTRY_LOGO_TEXT}</h1>
-			<img className="logo" src="/StartLogo.png" alt="lakshmi" />
-		</div>
-	) : (
-		children
-	);
+	return <img className="logo" src="/StartLogo.png" alt="lakshmi" />;
 };
