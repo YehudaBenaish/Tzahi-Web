@@ -1,6 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { EntryLogo } from './components';
-import { Section } from './components/Section/Section';
+import { EntryLogo, NavBar, Section } from './components';
 import {
 	ENTRY_DURATION,
 	I_BELIEVE,
@@ -8,7 +7,10 @@ import {
 	I_BELIEVE_PER_2,
 	I_BELIEVE_PER_3,
 	NIETZSCHE_QUOTE,
+	PREVIEW,
+	PREVIEW_BOLD,
 	VEHAHAVTA,
+	VEHAHAVTA_MESSAGE,
 	WHY_WE_DO_THIS_PER,
 } from './consts';
 import './app.less';
@@ -18,15 +20,20 @@ export function App() {
 	const [showEntryLogo, setShowEntryLogo] = useState(true);
 
 	return (
-		<div>
+		<div className="app-container">
 			{showEntryLogo ? (
 				<EntryLogo
 					duration={ENTRY_DURATION}
 					setShow={setShowEntryLogo}
 				/>
 			) : (
-				<div className="app-container">
+				<div>
+					<NavBar/>
 					<h1>{VEHAHAVTA}</h1>
+					<h4>{VEHAHAVTA_MESSAGE}</h4>
+					<h2>{PREVIEW}</h2>
+					<h2>{PREVIEW_BOLD}</h2>
+					<img alt={'logo'} src='/StartLogo.png'></img>
 					<div className="content">
 						<Section
 							headline={NIETZSCHE_QUOTE}

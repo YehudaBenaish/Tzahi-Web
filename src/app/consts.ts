@@ -1,5 +1,8 @@
 export const ENTRY_DURATION = 3000;
 export const VEHAHAVTA = `קהילת וְאָהַבְתָּ`;
+export const VEHAHAVTA_MESSAGE = `תנועה של אהבה`;
+export const PREVIEW = `לפני שנחבר אתכם לערכים ולאני  מאמין של הקהילה חשוב לנו שקודם כל תראו את הבסיס.`;
+export const PREVIEW_BOLD = `ומבחינתנו הבסיס של הכל הוא למה`;
 export const WHY_WE_DO_THIS = 'למה אנחנו עושים את זה?';
 export const NIETZSCHE_QUOTE = `
 "אדם שיש לחייו למה, יוכל לשאת כל איך"
